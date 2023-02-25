@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    min-height: 100vh;
+    display: flex;
+    flex-wrap:wrap;
+    padding-top: 6rem;
+    justify-content: center;
+    background: #010718;
+    overflow: hidden;
+}
+.container{
+width: 360px;
+padding-top: 1rem;
+overflow:hidden;
+margin: 0 auto;
+text-align: center;
+
+} 
+h1{
+    color: antiquewhite;position: relative;
+    animation: header  3s;
+    padding-top: 1rem;
+    padding-bottom: .75rem;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+.container .text{
+    color:#4070f4;
+    font-size:30px;
+    font-weight: 600;     
+}
+.container .text.first_text{
+color: white;
+}
+
+.second-text:before{
+    content: "";
+    position: absolute;
+    top:-1px;
+    left:0;
+    height:110%;
+    width:100%;
+    background-color:#010718 ; 
+    border-left: 2px solid #4070f4;
+    animation:animate 3s steps(12) infinite;
+   overflow: hidden;
+   animation-delay: 1s;
+    
+}
+.second-text{
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.container-btns{
+    margin-top: 1.5rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+
+}
+.container-btns a{
+    color:white;
+      padding:0.5rem 0.75rem;
+      margin: 0.75rem;
+      border: 1px solid #112357;
+      background: #112357;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif; 
+      text-transform: capitalize;
+}
+.my-icons ul{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-top: 2rem;
+   
+    
+}
+.my-icons ul li a{
+text-decoration: none;
+color: white;
+font-size: 24px;
+animation-name: links;
+    animation-duration: 3s;
+}
+/* 
+----------
+ANIMATIONS
+----------
+ */
+@keyframes animate{
+
+    40%, 60%{  
+        left:calc(100% + 4px) ;
+    }
+    100%{
+        left:0%;
+    }
+}
+@keyframes header {
+    0%{
+        left:-1000px;
+    }
+    100%{
+        left: 0;
+    }
+}
+
+@keyframes links{
+    0%{
+        color: black;
+    }
+    100%{
+        color: white;
+    }
+}
